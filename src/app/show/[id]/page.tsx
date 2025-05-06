@@ -37,8 +37,10 @@ const ShowPage = async ({ params }: ShowPageProps) => {
         <ul>
           {seasons.map((season) => (
             <li key={season.id}>
-              Saison {season.number} : {season.episodeOrder ?? "?"} épisodes (
-              {season.premiereDate} → {season.endDate})
+              <Link href={`/season/${season.id}`}>
+                Saison {season.number} : {season.episodeOrder ?? "?"} épisodes (
+                {season.premiereDate} → {season.endDate})
+              </Link>
             </li>
           ))}
         </ul>

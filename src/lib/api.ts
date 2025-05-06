@@ -106,3 +106,24 @@ export async function fetchPersonCastCredits(personId: number): Promise<CastCred
     return res.json();
 }
 
+/**
+ * Récupère les détails d'une saison par ID.
+ */
+export async function fetchSeasonDetails(seasonId: number): Promise<Season> {
+    const res = await fetch(`${BASE_URL}/seasons/${seasonId}`);
+    if (!res.ok) {
+        throw new Error('Erreur lors du chargement de la saison');
+    }
+    return res.json();
+}
+
+/**
+ * Récupère les détails d'un épisode par ID.
+ */
+export async function fetchEpisodeDetails(episodeId: number): Promise<Episode> {
+    const res = await fetch(`${BASE_URL}/episodes/${episodeId}`);
+    if (!res.ok) {
+        throw new Error('Erreur lors du chargement de l\'épisode');
+    }
+    return res.json();
+}
