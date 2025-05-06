@@ -1,0 +1,45 @@
+@use '../variables' as vars;
+
+.show-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .show-card-content {
+        padding: 15px;
+        text-align: left;
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: vars.$primary-color;
+        }
+
+        .genres {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            font-size: 0.95rem;
+            color: vars.$text-color;
+        }
+    }
+}
